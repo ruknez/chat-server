@@ -10,7 +10,8 @@ import (
 	"google.golang.org/protobuf/types/known/emptypb"
 )
 
-func (c *ChatService) SendMessage(_ context.Context, req *desc.SendMessageRequest) (*emptypb.Empty, error) {
+// SendMessage посылает сообщение в чат.
+func (c *Service) SendMessage(_ context.Context, req *desc.SendMessageRequest) (*emptypb.Empty, error) {
 	slog.Info("SendMessage method", "req", fmt.Sprintf("%+v", req))
 
 	return nil, nil
