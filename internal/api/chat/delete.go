@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log/slog"
 
-	desc "chat-server/pkg/chat_v1"
+	desc "github.com/ruknez/chat-server/pkg/chat_v1"
 
 	"google.golang.org/protobuf/types/known/emptypb"
 )

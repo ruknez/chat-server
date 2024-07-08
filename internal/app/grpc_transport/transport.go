@@ -1,4 +1,4 @@
-package grpc_transpotr
+package grpc_transport
 
 import (
 	"fmt"

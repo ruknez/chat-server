@@ -3,19 +3,19 @@ package main
 import (
 	"fmt"
 
-	"chat-server/internal/api/chat"
-	"chat-server/internal/app"
-	"chat-server/internal/app/grpc_transpotr"
+	"github.com/ruknez/chat-server/internal/api/chat"
+	"github.com/ruknez/chat-server/internal/app"
+	"github.com/ruknez/chat-server/internal/app/grpc_transport"
 )
 
 func main() {
 	chatV1 := chat.NewChatService()
-	transport, err := grpc_transpotr.NewTransportService()
+	transport, err := grpc_transport.NewTransportService()
 	if err != nil {
-		panic(fmt.Sprint("Error creating transport service: ", err))
+		panic(fmt.Errorf("creating transport service: %w", err))
 	}
 
 	if err = app.StartGrpcServer(transport, chatV1); err != nil {
-		panic(fmt.Sprint("Error starting grpc server: ", err))
+		panic(fmt.Errorf("starting grpc server: %w", err))
 	}
 }

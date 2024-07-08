@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log/slog"
 
-	desc "chat-server/pkg/chat_v1"
+	desc "github.com/ruknez/chat-server/pkg/chat_v1"
 )
 
 func (c *ChatService) Create(_ context.Context, req *desc.CreateRequest) (*desc.CreateResponse, error) {

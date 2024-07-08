@@ -5,7 +5,7 @@ import (
 	"log/slog"
 	"net"
 
-	desc "chat-server/pkg/chat_v1"
+	desc "github.com/ruknez/chat-server/pkg/chat_v1"
 
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"

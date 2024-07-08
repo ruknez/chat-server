@@ -1,7 +1,7 @@
 package chat
 
 import (
-	desc "chat-server/pkg/chat_v1"
+	desc "github.com/ruknez/chat-server/pkg/chat_v1"
 )
 
 // ChatService Реализация ручек чата.

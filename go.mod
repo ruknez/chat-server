@@ -1,4 +1,4 @@
-module chat-server
+module github.com/ruknez/chat-server
 
 go 1.22
 
