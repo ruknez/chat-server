@@ -22,3 +22,7 @@ services:
     restart: on-failure
     environment:
       DB_HOST: db
+
+
+# docker-compose build --no-cache
+# docker-compose up  -d

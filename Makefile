@@ -47,3 +47,6 @@ docker-build-and-push:
 
 # Для запуска на сервере
 #docker run -p 50051:50051 cr.selcloud.ru/courses/chat-server:v0.0.1
+
+# Для запуска docker-compose
+# docker-compose up -d
