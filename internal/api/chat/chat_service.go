@@ -7,7 +7,7 @@ import (
 	desc "github.com/ruknez/chat-server/pkg/chat_v1"
 )
 
-type crud interface {
+type workWithStorage interface {
 	CreateChat(ctx context.Context, massage domain.Chat) (int64, error)
 	DeleteChat(ctx context.Context, massage domain.Chat) error
 	SaveMassage(ctx context.Context, massage domain.Massage) (int64, error)
@@ -16,10 +16,10 @@ type crud interface {
 // Service Реализация ручек чата.
 type Service struct {
 	desc.UnimplementedChatV1Server
-	crudService crud
+	crudService workWithStorage
 }
 
 // NewChatService возвращает сервис реализующий хэндлеры.
-func NewChatService(c crud) *Service {
+func NewChatService(c workWithStorage) *Service {
 	return &Service{crudService: c}
 }

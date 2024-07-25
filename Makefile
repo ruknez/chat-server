@@ -23,11 +23,6 @@ generate-note-api:
 	--plugin=protoc-gen-go-grpc=bin/protoc-gen-go-grpc \
 	proto/chat/chat_v1.proto
 
-
-
-#install-golangci-lint:
-#	GOBIN=$(LOCAL_BIN) go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.53.3
-
 lint:
 	GOBIN=$(LOCAL_BIN) golangci-lint run ./... --config .golangci.pipeline.yaml
 
@@ -42,11 +37,3 @@ docker-build-and-push:
 	docker buildx build --no-cache --platform linux/amd64 -t cr.selcloud.ru/courses/chat-server:v0.0.1 .
 	docker login -u token -p token cr.selcloud.ru/courses
 	docker push cr.selcloud.ru/courses/chat-server:v0.0.1
-
-
-
-# Для запуска на сервере
-#docker run -p 50051:50051 cr.selcloud.ru/courses/chat-server:v0.0.1
-
-# Для запуска docker-compose
-# docker-compose up -d

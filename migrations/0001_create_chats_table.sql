@@ -3,7 +3,7 @@
 CREATE TABLE IF NOT EXISTS Chats
 (
     id       bigserial PRIMARY KEY,
-    name     VARCHAR(255) NOT NULL,
+    name     TEXT NOT NULL,
     user_ids bigint[]
 );
 -- +goose StatementEnd

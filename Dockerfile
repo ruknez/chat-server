@@ -6,7 +6,7 @@ WORKDIR  /github.com/ruknez/chat-server
 RUN go mod download
 RUN go build -o ./bin/chat_server cmd/chat_server/app.go
 
-FROM alpine:latest
+FROM alpine:3.20
 
 WORKDIR /root/
 COPY --from=builder /github.com/ruknez/chat-server/bin/chat_server .
