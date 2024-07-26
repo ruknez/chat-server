@@ -4,8 +4,8 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 CREATE TABLE IF NOT EXISTS Messages
 (
     id      UUID DEFAULT uuid_generate_v4(),
-    chat_id bigint REFERENCES Chats (id) ON DELETE CASCADE,
-    user_id bigint NOT NULL,
+    chat_id BIGINT REFERENCES Chats (id) ON DELETE CASCADE,
+    user_id BIGINT NOT NULL,
     text    TEXT,
     PRIMARY KEY (id, chat_id)
 );

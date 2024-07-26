@@ -2,9 +2,9 @@
 -- +goose StatementBegin
 CREATE TABLE IF NOT EXISTS Chats
 (
-    id       bigserial PRIMARY KEY,
+    id       BIGSERIAL PRIMARY KEY,
     name     TEXT NOT NULL,
-    user_ids bigint[]
+    user_ids BIGINT[]
 );
 -- +goose StatementEnd
 
