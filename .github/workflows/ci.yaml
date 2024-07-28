@@ -7,7 +7,7 @@ on:
     branches: [ main, master ]
 
 env:
-  REGISTRY: "cr.selcloud.ru/courses/chat-server"
+  REGISTRY: "cr.selcloud.ru/courses"
   IMAGE_NAME: "chat-server"
   CONTAINER_NAME: "chat-server-container"
 
