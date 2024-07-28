@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	grpcHost = "localhost"
+	grpcHost = ""
 	grpcPort = 50051
 )
 
